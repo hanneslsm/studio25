@@ -154,7 +154,7 @@
 				},
 				{
 					"name": "large",
-					"size": "32px",
+					"size": "clamp(24px, 2.5vw, 32px)",
 					"slug": "30"
 				},
 				{
@@ -173,14 +173,7 @@
 					"slug": "60"
 				}
 			],
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
 			"defaultFontSizes": false,
