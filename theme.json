@@ -173,7 +173,14 @@
 					"slug": "60"
 				}
 			],
-			"units": ["%", "px", "em", "rem", "vh", "vw"]
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
 		},
 		"typography": {
 			"defaultFontSizes": false,
@@ -291,7 +298,8 @@
 					"text": "var(--wp--preset--color--contrast-2)"
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--archivo)"
+					"fontFamily": "var(--wp--preset--font-family--archivo)",
+					"lineHeight": "1.1"
 				}
 			},
 			"link": {
@@ -316,7 +324,8 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)",
-			"fontSize": "var(--wp--preset--font-size--medium)"
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.5"
 		}
 	},
 	"templateParts": [
