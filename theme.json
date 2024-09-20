@@ -256,6 +256,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--contrast-3)"
 		},
+		"css": "html{-webkit-font-smoothing: antialiased;\n-moz-osx-font-smoothing: grayscale;\nfont-smooth: never;}",
 		"elements": {
 			"caption": {
 				"color": {
