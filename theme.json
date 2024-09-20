@@ -252,7 +252,16 @@
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast-3)"
+		},
 		"elements": {
+			"caption": {
+				"color": {
+					"text": "var(--wp--preset--color--contrast-5)"
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "80px"
@@ -284,8 +293,21 @@
 				}
 			},
 			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--contrast-2)"
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--archivo)"
+				}
+			},
+			"link": {
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--brand-4)"
+					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--brand-3)"
 				}
 			}
 		},
