@@ -1,0 +1,26 @@
+{
+	"name": "studio25",
+	"version": "0.1.",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier . --write && stylelint '**/*.css' --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hanneslsm/studio25.git"
+	},
+	"author": "hanneslsm",
+	"license": "GPL-2.0",
+	"bugs": {
+		"url": "https://github.com/hanneslsm/studio25/issues"
+	},
+	"homepage": "https://github.com/hanneslsm/studio25#readme",
+	"description": "",
+	"devDependencies": {
+		"@wordpress/prettier-config": "^4.8.0",
+		"@wordpress/stylelint-config": "^23.0.0",
+		"prettier": "3.3.3",
+		"stylelint": "^16.9.0",
+		"stylelint-config-standard": "^36.0.1"
+	}
+}
