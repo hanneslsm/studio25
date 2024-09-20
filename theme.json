@@ -141,7 +141,39 @@
 		},
 		"spacing": {
 			"units": ["%", "px", "em", "rem", "vh", "vw"],
-			"defaultSpacingSizes": false
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "small",
+					"size": "8px",
+					"slug": "10"
+				},
+				{
+					"name": "medium",
+					"size": "16px",
+					"slug": "20"
+				},
+				{
+					"name": "large",
+					"size": "32px",
+					"slug": "30"
+				},
+				{
+					"name": "x-large",
+					"size": "48px",
+					"slug": "40"
+				},
+				{
+					"name": "xx-large",
+					"size": "64px",
+					"slug": "50"
+				},
+				{
+					"name": "xxx-large",
+					"size": "96px",
+					"slug": "60"
+				}
+			]
 		},
 		"typography": {
 			"fontFamilies": [
