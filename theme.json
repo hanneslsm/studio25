@@ -289,6 +289,14 @@
 				}
 			}
 		},
+		"spacing": {
+			"padding": {
+				"bottom": "0px",
+				"left": "var(--wp--preset--spacing--20)",
+				"right": "var(--wp--preset--spacing--20)",
+				"top": "0px"
+			}
+		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)",
 			"fontSize": "var(--wp--preset--font-size--medium)"
