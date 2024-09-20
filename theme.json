@@ -253,7 +253,8 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-font)"
+			"fontFamily": "var(--wp--preset--font-family--system-font)",
+			"fontSize": "var:preset|font-size|medium"
 		}
 	},
 	"templateParts": [
