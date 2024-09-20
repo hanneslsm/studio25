@@ -5,15 +5,143 @@
 			"contentSize": "620px",
 			"wideSize": "1000px"
 		},
-		"spacing": {
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"gradients": [],
+			"palette": [
+				{
+					"color": "#ffffff",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#F9FAFB",
+					"name": "Base 2",
+					"slug": "base-2"
+				},
+				{
+					"color": "#F5F5F6",
+					"name": "Base 3",
+					"slug": "base-3"
+				},
+				{
+					"color": "#EAEBED",
+					"name": "Base 4",
+					"slug": "base-4"
+				},
+				{
+					"color": "#E0E1E3",
+					"name": "Base 5",
+					"slug": "base-5"
+				},
+				{
+					"color": "#D6D7D9",
+					"name": "Base 6",
+					"slug": "base-6"
+				},
+				{
+					"color": "#000",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#24272D",
+					"name": "Contrast 2",
+					"slug": "contrast-2"
+				},
+				{
+					"color": "#363B44",
+					"name": "Contrast 3",
+					"slug": "contrast-3"
+				},
+				{
+					"color": "#474F5D",
+					"name": "Contrast 4",
+					"slug": "contrast-4"
+				},
+				{
+					"color": "#576272",
+					"name": "Contrast 5",
+					"slug": "contrast-5"
+				},
+				{
+					"color": "#697586",
+					"name": "Contrast 6",
+					"slug": "contrast-6"
+				},
+				{
+					"color": "#00241A",
+					"name": "Brand",
+					"slug": "brand"
+				},
+				{
+					"color": "#012E29",
+					"name": "Brand 2",
+					"slug": "brand-2"
+				},
+				{
+					"color": "#07453E",
+					"name": "Brand 3",
+					"slug": "brand-3"
+				},
+				{
+					"color": "#C1E247",
+					"name": "Brand 4",
+					"slug": "brand-4"
+				},
+				{
+					"color": "#FAFCF5",
+					"name": "Brand 5",
+					"slug": "brand-5"
+				},
+				{
+					"color": "#FEFFFA",
+					"name": "Brand 6",
+					"slug": "brand-6"
+				},
+				{
+					"color": "#092630",
+					"name": "Brand 7",
+					"slug": "brand-7"
+				},
+				{
+					"color": "#093E4F",
+					"name": "Brand 8",
+					"slug": "brand-8"
+				},
+				{
+					"color": "#0D566A",
+					"name": "Brand 9",
+					"slug": "brand-9"
+				},
+				{
+					"color": "#D2E3EC",
+					"name": "Brand 10",
+					"slug": "brand-10"
+				},
+				{
+					"color": "#FCF3EC",
+					"name": "Brand 11",
+					"slug": "brand-11"
+				},
+				{
+					"color": "#FFFAF6",
+					"name": "Brand 12",
+					"slug": "brand-12"
+				},
+				{
+					"color": "#02DE91",
+					"name": "Accent",
+					"slug": "accent-1"
+				}
 			]
+		},
+		"spacing": {
+			"units": ["%", "px", "em", "rem", "vh", "vw"],
+			"defaultSpacingSizes": false
 		},
 		"typography": {
 			"fontFamilies": [
