@@ -12,7 +12,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 studio25 is a custom the for StudioLeismann.com Created by hanneslsm in Sevilla
 
-
 == Changelog ==
 
 = 1.0.0 =
