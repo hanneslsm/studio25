@@ -2,7 +2,7 @@
 
 /**
  * Enqueue files
- * 
+ *
  * @package prolooks
  * @since 0.1
  */
@@ -20,7 +20,7 @@ function prolooks_enqueue_styles()
 add_action('wp_enqueue_scripts', 'prolooks_enqueue_styles');
 
 /**
- * Enqueue Block specific assets 
+ * Enqueue Block specific assets
  */
 function enqueue_prolooks_blocks_editor_assets()
 {
@@ -80,7 +80,7 @@ function enqueue_prolooks_blocks_editor_assets()
 add_action('enqueue_block_editor_assets', 'enqueue_prolooks_blocks_editor_assets');
 
 /**
- * Register block styles 
+ * Register block styles
  */
 function register_prolooks_blocks_styles()
 {
