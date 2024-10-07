@@ -6,8 +6,8 @@
 		"format": "prettier . --write && stylelint '**/*.css' --fix",
 		"start": "wp-scripts start",
 		"build": "wp-scripts build",
-		"lint:style": "wp-scripts lint-style --fix",
-		"lint:style:src": "wp-scripts lint-style 'src/*'"
+		"lint:style": "wp-scripts lint-style",
+		"lint:style:src": "wp-scripts lint-style 'src/*' --fix"
 	},
 	"repository": {
 		"type": "git",
