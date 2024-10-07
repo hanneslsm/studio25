@@ -1,5 +1,5 @@
 /* Seperator
-* @since ProLooks 0.2
+* @since ProLooks 0.2.0
 --------------------------------------------- */
 
 /**
