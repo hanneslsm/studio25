@@ -6,8 +6,9 @@ Thumbs.db
 
 # Build Systems
 node_modules/
+/build
 
-# WordPres Files 
+# WordPres Files
 wp-content/*
 wp-config.php
 !wp-content/mu-plugins/
