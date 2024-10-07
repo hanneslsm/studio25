@@ -29,5 +29,6 @@ function studio25_enqueue_editor_assets()
 		get_template_directory_uri() . '/build/index.css',
 		array(),
 		$asset_file['version']
+	);
 }
 add_action('enqueue_block_editor_assets', 'studio25_enqueue_editor_assets');
