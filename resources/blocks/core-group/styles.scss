@@ -1,0 +1,15 @@
+/* Images
+* @since ProLooks 0.3
+--------------------------------------------- */
+
+.is-style-group-spotlight {
+	border: 3px solid red;
+	background-image: radial-gradient(
+		at 320px 100px,
+		rgba(24, 93, 106, 0) 0,
+		#1f3a47 70%
+	);
+	h1 {
+		text-shadow: 0px 2px 2px black;
+	}
+}
