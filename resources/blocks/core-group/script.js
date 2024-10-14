@@ -1,5 +1,4 @@
 /** Spotlight Effect */
-import { registerBlockVariation } from '@wordpress/blocks';
 
 
 document.addEventListener('DOMContentLoaded', function() {

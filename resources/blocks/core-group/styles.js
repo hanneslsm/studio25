@@ -1,6 +1,7 @@
 /** Image
  * @since ProLooks 3
  * --------------------------------------------- */
+
 /**
  * Register block styles
  */
