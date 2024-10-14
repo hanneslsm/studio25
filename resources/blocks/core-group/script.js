@@ -1,6 +1,8 @@
 /** Spotlight Effect */
 
+document.addEventListener('DOMContentLoaded', function() {
 const gradient = document.querySelector('.is-style-group-spotlight');
+
 
 function onMouseMove(event) {
 	gradient.style.backgroundImage =
@@ -11,3 +13,6 @@ function onMouseMove(event) {
 		'px, rgba(24, 93, 106, 0) 0, #1F3A47 70%)';
 }
 document.addEventListener('mousemove', onMouseMove);
+});
+
+console.log('Hello Script!');
