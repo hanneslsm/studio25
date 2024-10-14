@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
-		"build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
+		"start": "wp-scripts start --config webpack.config.js",
+		"build": "wp-scripts build --config webpack.config.js",
 		"lint:style": "wp-scripts lint-style",
 		"lint:resources": "wp-scripts lint-style 'resources/*' --fix",
 		"format": "wp-scripts format",
@@ -22,6 +22,7 @@
 	"homepage": "https://github.com/hanneslsm/studio25#readme",
 	"description": "",
 	"devDependencies": {
-		"@wordpress/scripts": "^30.1.0"
+		"@wordpress/scripts": "^30.1.0",
+		"glob": "^11.0.0"
 	}
 }
