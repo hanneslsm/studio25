@@ -9,3 +9,9 @@ wp.blocks.registerBlockStyle('core/group', {
 	name: 'group-spotlight',
 	label: 'Hover: Spotlight',
 });
+
+wp.blocks.registerBlockStyle('core/group', {
+	name: 'group-hover-up',
+	label: 'Hover: Up',
+});
+

@@ -9,3 +9,21 @@
 		#1f3a47 70%
 	);
 }
+
+
+.is-style-group-hover-up {
+	overflow: hidden;
+
+	& img{
+		margin-top: var(--wp--preset--spacing--30);
+		position: relative;
+		top: var(--wp--preset--spacing--30) ;
+		overflow: hidden;
+		transition: all 200ms ease-in-out;
+	}
+
+	&:hover img{
+		top: var(--wp--preset--spacing--10) ;
+
+	}
+}
