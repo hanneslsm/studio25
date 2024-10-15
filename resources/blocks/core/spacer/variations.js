@@ -1,6 +1,7 @@
 /* Seperator
 * @since ProLooks 0.2.0
 --------------------------------------------- */
+import { registerBlockVariation } from '@wordpress/blocks';
 
 /**
  * Defaults
