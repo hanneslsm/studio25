@@ -33,14 +33,3 @@ function studio25_enqueue_block_assets() {
 add_action( 'enqueue_block_assets', 'studio25_enqueue_block_assets' );
 
 
-
-// The proper way to enqueue GSAP script in WordPress
-
-// wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
-function theme_gsap_script(){
-    wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), false, true );
-    wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js', array('gsap-js'), false, true );
-	wp_enqueue_script( 'lenis', 'https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js', array(''), false, true );
-}
-
-add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
