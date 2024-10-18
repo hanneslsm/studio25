@@ -26,6 +26,7 @@
 		"glob": "^11.0.0"
 	},
 	"dependencies": {
-		"gsap": "^3.12.5"
+		"gsap": "^3.12.5",
+		"gsap-trial": "^3.12.5"
 	}
 }
