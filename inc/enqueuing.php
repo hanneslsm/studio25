@@ -31,3 +31,5 @@ function studio25_enqueue_block_assets() {
     );
 }
 add_action( 'enqueue_block_assets', 'studio25_enqueue_block_assets' );
+
+
