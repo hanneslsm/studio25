@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Flip from "gsap/Flip";
+import { ScrollSmoother } from "gsap-trial/all";
 
 
-gsap.registerPlugin(ScrollTrigger);
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 gsap.to('.my-elements', {
 	x: "-100%",
@@ -18,3 +19,11 @@ gsap.to('.my-elements', {
 })
 
 
+
+// Initialize ScrollSmoother
+ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 1, // smoothness (0 = no smoothing)
+    effects: true, // looks for data-speed and data-lag attributes on elements
+});
