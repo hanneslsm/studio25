@@ -1,0 +1,9 @@
+.my-elements{
+	position: sticky;
+	top: 0;
+	max-height: 100vh;
+	max-width: 50vw;
+	div{
+		min-width: 100%;
+	}
+}
