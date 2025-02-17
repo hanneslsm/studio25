@@ -1,0 +1,26 @@
+/* Hero Classes
+--------------------------------------------- */
+
+/**
+ * .is-style-bittnerkrull-hero is a depreceated group block style but may still
+ * be in use.
+ */
+.bittnerkrull-hero,
+.is-style-bittnerkrull-hero {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-shadow:
+			0px 3px 3px var(--wp--preset--color--brand),
+			0px 6px 12px var(--wp--preset--color--brand);
+	}
+	p {
+		text-shadow:
+			0px 1px 1px var(--wp--preset--color--contrast),
+			0px 2px 3px var(--wp--preset--color--contrast),
+			0px 4px 6px var(--wp--preset--color--brand);
+	}
+}
