@@ -1,29 +1,39 @@
 {
 	"name": "studio25",
-	"version": "0.1.0",
+	"version": "2.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "wp-scripts start --config webpack.config.js",
-		"build": "wp-scripts build --config webpack.config.js",
-		"lint:style": "wp-scripts lint-style",
-		"lint:resources": "wp-scripts lint-style 'resources/*' --fix",
-		"format": "wp-scripts format",
-		"format:resources": "wp-scripts format ./resources"
+		"start": "wp-scripts start --config webpack.config.js --env development ",
+		"build": "wp-scripts build --config webpack.config.js --env production",
+		"lint:style": "wp-scripts lint-style 'src/*'",
+		"lint:fix": "wp-scripts lint-style 'src/*' --fix",
+		"format": "wp-scripts format 'src/**/*.{js,jsx,json,ts,tsx,css,scss,php}' '!src/fonts/**'",
+		"zip": "wp-scripts plugin-zip",
+		"packages-update": "wp-scripts packages-update"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/hanneslsm/studio25.git"
-	},
+	"files": [
+		"/*",
+		"!/studio25",
+		"!/studio25.zip",
+		"!/src",
+		"!.vscode",
+		"!.editorconfig",
+		"!.gitignore",
+		"!package.json",
+		"!webpack.config.js"
+	],
 	"author": "hanneslsm",
 	"license": "GPL-2.0",
-	"bugs": {
-		"url": "https://github.com/hanneslsm/studio25/issues"
-	},
-	"homepage": "https://github.com/hanneslsm/studio25#readme",
 	"description": "",
 	"devDependencies": {
-		"@wordpress/scripts": "^30.1.0",
-		"glob": "^11.0.0"
+		"@wordpress/scripts": "^30.6.0",
+		"copy-webpack-plugin": "^12.0.2",
+		"glob": "^11.0.0",
+		"image-minimizer-webpack-plugin": "^4.1.1",
+		"imagemin": "^9.0.0",
+		"imagemin-webpack-plugin": "^2.4.2",
+		"sharp": "^0.33.5",
+		"webpack-remove-empty-scripts": "^1.0.4"
 	},
 	"dependencies": {
 		"gsap": "^3.12.5"
