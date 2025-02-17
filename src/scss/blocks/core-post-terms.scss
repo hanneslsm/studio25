@@ -1,0 +1,23 @@
+/**
+* Post Terms
+* -------------------------------------- */
+
+.is-style-post-terms-events {
+	display: flex;
+	flex-direction: column;
+	color: var(--wp--preset--color--contrast-6);
+	& span:first-child {
+		color: var(--wp--preset--color--brand-3);
+	}
+}
+
+.is-style-post-terms-products {
+	display: flex;
+	flex-direction: column;
+	& span:not(.wp-block-post-terms__prefix, .wp-block-post-terms__suffix) {
+		border-inline-start: 2px solid var(--wp--preset--color--brand-3);
+		padding-inline-start: var(--wp--preset--spacing--20);
+		margin-block-end: var(--wp--preset--spacing--10);
+		line-height: 1.25;
+	}
+}

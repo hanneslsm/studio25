@@ -1,0 +1,77 @@
+/* Details
+--------------------------------------------- */
+
+.is-style-details-chevron {
+	& summary {
+		display: flex;
+		font-weight: 600;
+		//justify-content: space-between;
+		color: var(--wp--preset--color-contrast-2);
+
+		transition: all 0.2s ease-in-out;
+		/* remove rectangle on Safari */
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::after {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: rotate(0deg); /* chevron faces to right */
+			transition: 0.2s;
+
+			padding-bottom: 0.2em;
+			aspect-ratio: 1/1;
+			height: 1.5em;
+			content: "\203A"; /* chevron */
+			font-weight: 400;
+			//font-size: 1.2em;
+		}
+	}
+	& p:first-of-type {
+		margin-top: var(--wp--preset--spacing--10);
+	}
+
+	&[open] summary::after {
+		transform: rotate(90deg); /* chevron faces to the bottom */
+		padding-bottom: 0.2em;
+	}
+}
+
+.is-style-details-chevron-2 {
+	& summary {
+		display: flex;
+		font-weight: 600;
+		justify-content: space-between;
+		color: var(--wp--preset--color-contrast-4);
+		transition: all 0.2s ease-in-out;
+		/* remove rectangle on Safari */
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::after {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: rotate(90deg); /* chevron faces down */
+			transition: 0.2s;
+
+			padding-bottom: 0.2em;
+			aspect-ratio: 1/1;
+			content: "\203A"; /* chevron */
+			font-weight: 400;
+			font-size: 1.3em;
+			height: 1em;
+		}
+	}
+	& p:first-of-type {
+		margin-top: var(--wp--preset--spacing--10);
+	}
+
+	&[open] summary::after {
+		transform: rotate(270deg); /* chevron faces up */
+		padding-bottom: 0.2em;
+	}
+}
