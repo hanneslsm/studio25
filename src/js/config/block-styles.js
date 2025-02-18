@@ -23,6 +23,10 @@ const blockStyles = [
 		styles: [ { name: 'prolooks-scale-effect', label: '🤩 Scale Effect' } ],
 	},
 	{
+		block: 'core/group',
+		styles: [ { name: 'prolooks-spotlight', label: '🤩 Spotlight' } ],
+	},
+	{
 		block: 'core/list',
 		styles: [
 			{ name: 'prolooks-checkmark', label: '🤩 Checkmark' },
