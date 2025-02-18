@@ -63,10 +63,10 @@ module.exports = function (env) {
 	// Merge with defaultConfig
 	return merge(defaultConfig, {
 		entry: {
-			"css/global": path.resolve(__dirname, "src", "global.scss"),
-			"css/screen": path.resolve(__dirname, "src", "screen.scss"),
-			"css/editor": path.resolve(__dirname, "src", "editor.scss"),
-			"js/global": path.resolve(__dirname, "src", "global.js"),
+			"css/global": path.resolve(__dirname, "src", "scss/global.scss"),
+			"css/screen": path.resolve(__dirname, "src", "scss/screen.scss"),
+			"css/editor": path.resolve(__dirname, "src", "scss/editor.scss"),
+			"js/global": path.resolve(__dirname, "src", "js/global.js"),
 			...blockStyles, // Include dynamically generated block styles
 		},
 		plugins, // Use the plugins array
