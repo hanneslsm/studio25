@@ -72,5 +72,17 @@ module.exports = function (env) {
 		},
 		plugins, // Use the plugins array
 		mode: mode,
+		stats:
+		{
+			all: false,
+			source: true,
+			assets: true,
+			errorsCount: true,
+			errorStack: true,
+			errors: true,
+			warningsCount: true,
+			warnings: true,
+			colors: true,
+		  },
 	});
 };
