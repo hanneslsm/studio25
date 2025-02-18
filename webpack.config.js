@@ -6,13 +6,17 @@ const { merge } = require("webpack-merge");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 const fs = require("fs");
 
+// Read version from package.json
+const packageJson = require("./package.json");
+
 module.exports = function (env) {
 	const isProduction = process.env.NODE_ENV === "production";
 	const mode = isProduction ? "production" : "development";
 	console.log(`#### mode: ${mode} ####`);
 
 	// Dynamically get all SCSS files in the blocks folder
-	const blockStyles = fs.readdirSync(path.resolve(__dirname, "src/scss/blocks"))
+	const blockStyles = fs
+		.readdirSync(path.resolve(__dirname, "src/scss/blocks"))
 		.filter((file) => file.endsWith(".scss"))
 		.reduce((entries, file) => {
 			const name = `css/blocks/${file.replace(".scss", "")}`;
@@ -37,7 +41,7 @@ module.exports = function (env) {
 					{
 						from: path.resolve(__dirname, "src/images"),
 						to: path.resolve(__dirname, "build/images"),
-						noErrorOnMissing: true, // Add this option to ignore missing folders
+						noErrorOnMissing: true, // Ignores missing folders
 					},
 				],
 			}),
@@ -57,11 +61,46 @@ module.exports = function (env) {
 						},
 					},
 				},
-			}),
+			})
 		);
 	}
 
-	// Merge with defaultConfig
+	// Custom plugin to update style.css version and output an info line
+	plugins.push({
+		apply: (compiler) => {
+			compiler.hooks.afterEmit.tap("UpdateThemeVersionPlugin", () => {
+				try {
+					// Path to your style.css (adjust if needed)
+					const styleCssPath = path.resolve(__dirname, "style.css");
+
+					// Check if style.css exists
+					if (!fs.existsSync(styleCssPath)) {
+						console.warn(`No style.css found at ${styleCssPath}. Skipping version update.`);
+						return;
+					}
+
+					// Read the content of style.css
+					let styleContent = fs.readFileSync(styleCssPath, "utf-8");
+
+					// Update the version header using regex
+					styleContent = styleContent.replace(
+						/(Version:\s*)([^\r\n]+)/,
+						`$1${packageJson.version}`
+					);
+
+					// Write the updated content back to style.css
+					fs.writeFileSync(styleCssPath, styleContent, "utf-8");
+
+					// Output an info line to the console
+					console.info(`Theme version in style.css has been updated to ${packageJson.version}.`);
+				} catch (error) {
+					console.error("Error updating style.css version:", error);
+				}
+			});
+		},
+	});
+
+	// Merge with the default config
 	return merge(defaultConfig, {
 		entry: {
 			"css/global": path.resolve(__dirname, "src", "scss/global.scss"),
@@ -70,10 +109,9 @@ module.exports = function (env) {
 			"js/global": path.resolve(__dirname, "src", "js/global.js"),
 			...blockStyles, // Include dynamically generated block styles
 		},
-		plugins, // Use the plugins array
+		plugins,
 		mode: mode,
-		stats:
-		{
+		stats: {
 			all: false,
 			source: true,
 			assets: true,
@@ -83,6 +121,6 @@ module.exports = function (env) {
 			warningsCount: true,
 			warnings: true,
 			colors: true,
-		  },
+		},
 	});
 };
