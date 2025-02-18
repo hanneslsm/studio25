@@ -1,7 +1,7 @@
-/* Paragraph
+/* Block Style: Indicator
 --------------------------------------------- */
 
-.is-style-paragraph-indicator {
+p.is-style-indicator {
 	padding-inline-start: var(--wp--preset--spacing--20);
 	text-indent: -2px; /* adjust the space of the border */
 	&::before {
@@ -11,13 +11,10 @@
 		right: var(--wp--preset--spacing--20);
 	}
 
-	/**
-	 * Section Styles
-	 * -------------------------------------- */
+	/* Section Styles
+	--------------------------------------------- */
 
-	/**
- 	* Brand
-	*/
+	/* [Brand-3] */
 	.is-style-section-brand-3 & {
 		&::before {
 			border: 1px solid var(--wp--preset--color--brand-7);

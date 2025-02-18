@@ -27,9 +27,9 @@ const packageJson = require( './package.json' );
 const getScssFiles = ( directory ) => {
 	return fs.existsSync( directory )
 		? fs
-			.readdirSync( directory )
-			.filter( ( file ) => file.endsWith( '.scss' ) )
-			.map( ( file ) => path.resolve( directory, file ) )
+				.readdirSync( directory )
+				.filter( ( file ) => file.endsWith( '.scss' ) )
+				.map( ( file ) => path.resolve( directory, file ) )
 		: [];
 };
 
@@ -38,40 +38,51 @@ module.exports = ( env ) => {
 	const mode = isProduction ? 'production' : 'development';
 	console.log( `#### mode: ${ mode } ####` );
 
-	// Define directories for SCSS files.
-	const blocksDir   = path.resolve( __dirname, 'src/scss/styles/blocks' );
-	const sectionsDir = path.resolve( __dirname, 'src/scss/styles/sections' );
+	// 1. Get block styles from src/scss/blocks (each file becomes its own entry)
+	const blockStylesDir = path.resolve( __dirname, 'src/scss/blocks' );
+	const blockStyles = fs.existsSync( blockStylesDir )
+		? fs
+				.readdirSync( blockStylesDir )
+				.filter( ( file ) => file.endsWith( '.scss' ) )
+				.reduce( ( entries, file ) => {
+					const name = `css/blocks/${ file.replace( '.scss', '' ) }`;
+					entries[ name ] = path.resolve( blockStylesDir, file );
+					return entries;
+				}, {} )
+		: {};
 
-	// Get SCSS files for blocks and sections.
-	const blockFiles   = getScssFiles( blocksDir );
-	const sectionFiles = getScssFiles( sectionsDir );
+	// 2. Get SCSS files for styles/blocks and styles/sections
+	const stylesBlocksDir = path.resolve( __dirname, 'src/scss/styles/blocks' );
+	const stylesSectionsDir = path.resolve( __dirname, 'src/scss/styles/sections' );
+	const stylesBlockFiles = getScssFiles( stylesBlocksDir );
+	const stylesSectionFiles = getScssFiles( stylesSectionsDir );
 
 	// Define entry points.
 	const entries = {
-		'css/global': path.resolve( __dirname, 'src/scss/global.scss' ),
-		'css/screen': path.resolve( __dirname, 'src/scss/screen.scss' ),
-		'css/editor': path.resolve( __dirname, 'src/scss/editor.scss' ),
-		'js/global': path.resolve( __dirname, 'src/js/global.js' ),
+		'css/global': path.resolve( __dirname, 'src', 'scss/global.scss' ),
+		'css/screen': path.resolve( __dirname, 'src', 'scss/screen.scss' ),
+		'css/editor': path.resolve( __dirname, 'src', 'scss/editor.scss' ),
+		'js/global': path.resolve( __dirname, 'src', 'js/global.js' ),
+		...blockStyles, // from src/scss/blocks
 	};
 
-	// Only add SCSS entries if they contain files.
-	if ( blockFiles.length ) {
-		entries[ 'css/styles/blocks' ] = blockFiles;
+	// Bundle files from src/scss/styles/blocks and src/scss/styles/sections only if files exist.
+	if ( stylesBlockFiles.length ) {
+		entries[ 'css/styles/blocks' ] = stylesBlockFiles;
 	}
-	if ( sectionFiles.length ) {
-		entries[ 'css/styles/sections' ] = sectionFiles;
+	if ( stylesSectionFiles.length ) {
+		entries[ 'css/styles/sections' ] = stylesSectionFiles;
 	}
 
 	// Define plugins.
 	const plugins = [
 		...( defaultConfig.plugins || [] ),
 		new RemoveEmptyScriptsPlugin( {
-			/* Ensures this runs after asset files are generated. */
+			/* Ensures this runs after *.asset.php files are generated */
 			stage: RemoveEmptyScriptsPlugin.STAGE_AFTER_PROCESS_PLUGINS,
 		} ),
 	];
 
-	// In production mode, copy images and optimize them.
 	if ( isProduction ) {
 		plugins.push(
 			new CopyWebpackPlugin( {
@@ -109,12 +120,10 @@ module.exports = ( env ) => {
 			compiler.hooks.afterEmit.tap( 'UpdateThemeVersionPlugin', () => {
 				try {
 					const styleCssPath = path.resolve( __dirname, 'style.css' );
-
 					if ( ! fs.existsSync( styleCssPath ) ) {
 						console.warn( `No style.css found at ${ styleCssPath }. Skipping version update.` );
 						return;
 					}
-
 					let styleContent = fs.readFileSync( styleCssPath, 'utf-8' );
 					styleContent = styleContent.replace(
 						/(Version:\s*)([^\r\n]+)/,
@@ -125,24 +134,23 @@ module.exports = ( env ) => {
 				} catch ( error ) {
 					console.error( 'Error updating style.css version:', error );
 				}
-			} );
+			});
 		},
 	} );
 
 	return merge( defaultConfig, {
-		mode: mode,
+		mode,
 		entry: entries,
-		plugins: plugins,
+		plugins,
 		stats: {
 			all: false,
 			source: true,
 			assets: true,
 			errorsCount: true,
-			errorStack: true,
 			errors: true,
 			warningsCount: true,
 			warnings: true,
 			colors: true,
 		},
-	} );
+	});
 };

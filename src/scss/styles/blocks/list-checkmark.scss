@@ -1,18 +1,10 @@
-/* List
+/* Block Style: List Checkmark
 --------------------------------------------- */
 
 .is-style-list-checkmark {
 	list-style-type: "\2713";
 	padding-inline-start: 3ch;
 
-	& li {
-		padding-inline-start: 1ch;
-	}
-}
-
-.is-style-list-crossmark {
-	list-style-type: "\2717";
-	padding-inline-start: 3ch;
 	& li {
 		padding-inline-start: 1ch;
 	}
