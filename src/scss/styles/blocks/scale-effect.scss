@@ -1,0 +1,14 @@
+/**
+ * Block Style: Scale Effect
+ * --------------------------------------
+ */
+
+ .wp-block-gallery.is-style-scale-effect {
+	figure {
+		transition: all 200ms ease-in-out;
+		max-width: 120px;
+	}
+	figure:hover {
+		transform: scale(1.2);
+	}
+}

@@ -1,0 +1,11 @@
+/* Block Style: List Crossmark
+--------------------------------------------- */
+
+
+.is-style-list-crossmark {
+	list-style-type: "\2717";
+	padding-inline-start: 3ch;
+	& li {
+		padding-inline-start: 1ch;
+	}
+}

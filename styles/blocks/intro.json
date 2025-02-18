@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"blockTypes": ["core/paragraph"],
+	"slug": "intro",
+	"title": "Intro",
+	"styles":{
+		"typography": {
+			"fontSize": "clamp(1.125rem, 0.313vw + 1rem, 1.25rem)"
+		}
+	}
+}
