@@ -1,9 +1,9 @@
 <?php
 
 /**
- * prolooks functions and definitions
- * 
- * @package prolooks
+ * studio25 functions and definitions
+ *
+ * @package studio25
  * @since 0.1
  */
 
@@ -12,7 +12,7 @@
 require get_template_directory() . '/inc/setup.php';
 
 // Patterns Setup
-require get_template_directory() . '/inc/patterns.php';
+require get_template_directory() . '/inc/block-patterns.php';
 
 // Enqueue files
 require get_template_directory() . '/inc/enqueuing.php';

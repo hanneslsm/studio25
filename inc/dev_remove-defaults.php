@@ -2,9 +2,9 @@
 
 /**
  * Remove default css. Use only for development!
- * 
- * @package prolooks
- * @since 0.5
+ *
+ * @package studio25
+ * @since 0.1.0
  * @link https://github.com/WordPress/gutenberg/issues/36834#issuecomment-1769802551
  * @author https://github.com/bd-viget
  */
@@ -12,7 +12,7 @@
 
 /**
  * Remove bloated inline core color styles.
- * 
+ *
  * @param \WP_Theme_JSON_Data $theme_json Class to access and update the underlying data.
  *
  * @return \WP_Theme_JSON_Data

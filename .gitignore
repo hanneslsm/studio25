@@ -6,7 +6,7 @@ Thumbs.db
 
 # Build Systems
 node_modules/
-/public
+/build
 
 # WordPres Files
 wp-content/*
