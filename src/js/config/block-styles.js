@@ -2,88 +2,57 @@
  * --------------------------------------------- */
 import { registerBlockStyle } from '@wordpress/blocks';
 
-/**
- * Core Button
- */
+const blockStyles = [
+	{
+		block: 'core/button',
+		styles: [
+			{ name: 'bittnerkrull-button-brand', label: 'BK Brand' },
+			{ name: 'bittnerkrull-button-base', label: 'BK Base' },
+		],
+	},
+	{
+		block: 'core/cover',
+		styles: [
+			{
+				name: 'bittnerkrull-cover-hover-reveal',
+				label: 'BK Hover Reveal',
+			},
+			{ name: 'cover-link', label: 'Link' },
+		],
+	},
+	{
+		block: 'core/details',
+		styles: [
+			{ name: 'details-chevron', label: 'Chevron' },
+			{ name: 'details-chevron-2', label: 'Chevron 2' },
+		],
+	},
+	{
+		block: 'core/gallery',
+		styles: [
+			{ name: 'bittnerkrull-frontpage-logos', label: 'BK Logo Wall' },
+			{ name: 'gallery-scale-effect', label: 'Scale Effect' },
+		],
+	},
+	{
+		block: 'core/list',
+		styles: [
+			{ name: 'list-checkmark', label: 'Checkmark' },
+			{ name: 'list-crossmark', label: 'Crossmark' },
+		],
+	},
+	{
+		block: 'core/paragraph',
+		styles: [
+			{ name: 'paragraph-kicker', label: 'Kicker Text' },
+			{ name: 'paragraph-intro', label: 'Intro Text' },
+			{ name: 'paragraph-indicator', label: 'Indicator' },
+		],
+	},
+];
 
-wp.blocks.registerBlockStyle( 'core/button', {
-	name: 'bittnerkrull-button-brand',
-	label: 'BK Brand',
-} );
-
-wp.blocks.registerBlockStyle( 'core/button', {
-	name: 'bittnerkrull-button-base',
-	label: 'BK Base',
-} );
-
-/**
- * Core Cover
- */
-
-wp.blocks.registerBlockStyle( 'core/cover', {
-	name: 'bittnerkrull-cover-hover-reveal',
-	label: 'BK Hover Reveal',
-} );
-
-wp.blocks.registerBlockStyle( 'core/cover', {
-	name: 'cover-link',
-	label: 'Link',
-} );
-
-/**
- * Core Details
- */
-wp.blocks.registerBlockStyle( 'core/details', {
-	name: 'details-chevron',
-	label: 'Chevron',
-} );
-
-wp.blocks.registerBlockStyle( 'core/details', {
-	name: 'details-chevron-2',
-	label: 'Chevron 2',
-} );
-
-/**
- * Core Gallery
- */
-
-wp.blocks.registerBlockStyle( 'core/gallery', {
-	name: 'bittnerkrull-frontpage-logos',
-	label: 'BK Logo Wall',
-} );
-
-wp.blocks.registerBlockStyle( 'core/gallery', {
-	name: 'gallery-scale-effect',
-	label: 'Scale Effect',
-} );
-
-/**
- * Core List
- */
-wp.blocks.registerBlockStyle( 'core/list', {
-	name: 'list-checkmark',
-	label: 'Checkmark',
-} );
-
-wp.blocks.registerBlockStyle( 'core/list', {
-	name: 'list-crossmark',
-	label: 'Crossmark',
-} );
-
-/**
- * Core Paragraph
- */
-wp.blocks.registerBlockStyle( 'core/paragraph', {
-	name: 'paragraph-kicker',
-	label: 'Kicker Text',
-} );
-
-wp.blocks.registerBlockStyle( 'core/paragraph', {
-	name: 'paragraph-intro',
-	label: 'Intro Text',
-} );
-
-wp.blocks.registerBlockStyle( 'core/paragraph', {
-	name: 'paragraph-indicator',
-	label: 'Indicator',
+blockStyles.forEach( ( { block, styles } ) => {
+	styles.forEach( ( { name, label } ) => {
+		wp.blocks.registerBlockStyle( block, { name, label } );
+	} );
 } );
