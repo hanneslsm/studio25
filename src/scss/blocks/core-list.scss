@@ -1,0 +1,24 @@
+///
+/// List
+///
+
+/* Block Style: Checkmark
+============================================================== */
+.wp-block-list.is-style-prolooks-checkmark {
+	list-style-type: "\2713";
+	padding-inline-start: 3ch;
+
+	& li {
+		padding-inline-start: 1ch;
+	}
+}
+
+/* Block Style: Crossmark
+============================================================== */
+.wp-block-list.is-style-prolooks-crossmark {
+	list-style-type: "\2717";
+	padding-inline-start: 3ch;
+	& li {
+		padding-inline-start: 1ch;
+	}
+}
