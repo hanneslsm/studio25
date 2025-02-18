@@ -1,7 +1,15 @@
-/* Block Style: Indicator
---------------------------------------------- */
+///
+/// Paragraph
+///
 
-p.is-style-indicator {
+
+ /* Block Style: Kicker
+============================================================== */
+/// See styles/blocks
+
+ /* Block Style: Indicator
+============================================================== */
+p.is-style-prolooks-indicator {
 	padding-inline-start: var(--wp--preset--spacing--20);
 	text-indent: -2px; /* adjust the space of the border */
 	&::before {
@@ -12,7 +20,7 @@ p.is-style-indicator {
 	}
 
 	/* Section Styles
-	--------------------------------------------- */
+	-------------------------------------------------------------- */
 
 	/* [Brand-3] */
 	.is-style-section-brand-3 & {
@@ -21,3 +29,4 @@ p.is-style-indicator {
 		}
 	}
 }
+

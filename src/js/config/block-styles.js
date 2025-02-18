@@ -6,8 +6,39 @@ const blockStyles = [
 	{
 		block: 'core/button',
 		styles: [
-			{ name: 'studio25-button-brand', label: 'Studio25 Brand' },
-			{ name: 'studio25-button-base', label: 'Studio25 Base' },
+			{ name: 'prolooks-brand', label: '🤩 Brand' },
+			{ name: 'prolooks-base', label: '🤩 Base' },
+		],
+	},
+	{
+		block: 'core/cover',
+		styles: [
+			{ name: 'prolooks-cover-link', label: '🤩 Link' },
+		],
+	},
+	{
+		block: 'core/details',
+		styles: [
+			{ name: 'prolooks-chevron', label: '🤩 Chevron' },
+		],
+	},
+	{
+		block: 'core/gallery',
+		styles: [
+			{ name: 'prolooks-scale-effect', label: '🤩 Scale Effect' },
+		],
+	},
+	{
+		block: 'core/list',
+		styles: [
+			{ name: 'prolooks-checkmark', label: '🤩 Checkmark' },
+			{ name: 'prolooks-crossmark', label: '🤩 Crossmark' },
+		],
+	},
+	{
+		block: 'core/paragraph',
+		styles: [
+			{ name: 'prolooks-indicator', label: '🤩 Indicator' },
 		],
 	},
 ];
