@@ -1,7 +1,11 @@
-/* Navigation
---------------------------------------------- */
+///
+/// Navigation
+///
+
 @use "../base/variables" as *;
 
+/* General: Navigation Styling
+============================================================== */
 @media screen and (min-width: $medium) {
 	.wp-block-navigation
 		.has-child:not(.open-on-click):hover
@@ -14,11 +18,5 @@
 		.wp-block-navigation-item a:hover {
 			color: var(--wp--preset--color--contrast-3);
 		}
-	}
-}
-.wp-block-navigation a:not([href]) {
-	cursor: context-menu;
-	&:hover {
-		text-decoration: none;
 	}
 }
