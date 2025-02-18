@@ -37,6 +37,7 @@ module.exports = function (env) {
 					{
 						from: path.resolve(__dirname, "src/images"),
 						to: path.resolve(__dirname, "build/images"),
+						noErrorOnMissing: true, // Add this option to ignore missing folders
 					},
 				],
 			}),
