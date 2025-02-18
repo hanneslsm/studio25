@@ -30,7 +30,10 @@
 	}
 
 	&.has-background:hover {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+		background-image: linear-gradient(
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.2)
+		);
 		background-blend-mode: overlay;
 	}
 
@@ -65,7 +68,6 @@
 	}
 }
 
-
 /* Block Style: Base
 ============================================================== */
 .wp-block-button.is-style-prolooks-base > .wp-block-button__link {
@@ -88,7 +90,6 @@
 		background-color: var(--wp--preset--color--base);
 	}
 }
-
 
 /* Block Style: Brand
 ============================================================== */
