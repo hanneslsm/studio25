@@ -31,7 +31,7 @@ const blockStyles = [
 		styles: [
 			{ name: 'prolooks-checkmark', label: '🏅 Checkmark' },
 			{ name: 'prolooks-crossmark', label: '🏅 Crossmark' },
-			{ name: 'prolooks-crossmark-2-red', label: '🏅 Crossmark 2 Red' },
+			{ name: 'prolooks-crossmark-2', label: '🏅 Crossmark 2 Red' },
 		],
 	},
 	{
