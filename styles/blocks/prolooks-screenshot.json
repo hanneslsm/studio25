@@ -5,7 +5,7 @@
 	"slug": "prolooks-screenshot",
 	"title": "🏅 Screenshot",
 	"styles":{
-		"css": "/* see also src/scss/styles/blocks/ */",
+		"css": "/* see also src/scss/sections/ */",
 		"border": {
 			"color":"var:preset|color|base",
 			"style": "solid",
