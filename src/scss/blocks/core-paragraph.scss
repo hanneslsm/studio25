@@ -3,6 +3,16 @@
 ///
 
 /**
+* Bug fixes
+*
+============================================================== */
+
+/** @link  https://github.com/WordPress/gutenberg/issues/55190 */
+p{
+	text-wrap: balance;
+}
+
+/**
 * Block Style: Kicker
 *
 ============================================================== */
