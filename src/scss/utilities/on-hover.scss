@@ -62,6 +62,7 @@
 .on-hover-shine {
 	position: relative;
 	overflow: hidden;
+	cursor: auto;
 
 
 	&::before {
@@ -79,6 +80,7 @@
 	  transform: skewX( -25deg );
 	  width: 50%;
 	  z-index: 2;
+	  pointer-events: none;
 	}
 
 	&:hover,

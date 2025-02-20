@@ -7,10 +7,13 @@
  * ============================================================== */
 
 /** @link https://github.com/WordPress/gutenberg/issues/69255 */
-.is-style-section-header .wp-block-image img {
+.is-style-section-header-fixed .wp-block-image img {
 	vertical-align: middle;
 }
 
-div.is-style-section-header {
-
+div.is-style-section-header-fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	top: var(--wp--preset--spacing--20);
 }

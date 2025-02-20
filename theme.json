@@ -86,7 +86,7 @@
 					"slug": "contrast-6"
 				},
 				{
-					"color": "#012E29",
+					"color": "#07453e",
 					"name": "Brand",
 					"slug": "brand"
 				},
@@ -191,7 +191,7 @@
 				},
 				{
 					"name": "xxx-large",
-					"size": "rem",
+					"size": "6rem",
 					"slug": "60"
 				}
 			],

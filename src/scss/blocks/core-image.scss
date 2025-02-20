@@ -2,7 +2,6 @@
 /// Image
 ///
 
-
 /**
  * Block Style: Screenshot
  * ============================================================== */
@@ -21,7 +20,6 @@
 	}
 }
 
-
 /**
  * Block Style: Picture Frame
  * ============================================================== */
@@ -34,14 +32,12 @@
 		box-shadow: var(--wp--preset--shadow--small);
 		border: 0.6em solid var(--wp--preset--color--base);
 		transition: all 0.2s ease-in-out;
-	  }
-	  &:hover img {
+	}
+	&:hover img {
 		box-shadow: var(--wp--preset--shadow--medium);
-	  }
-	  &:hover {
-		transform: rotate(-2deg);
-	  }
+	}
+	&:hover  {
+		transform: rotate(-2deg) !important;
+	}
 
 }
-
-
