@@ -1,5 +1,6 @@
 /**
  * Helper classes
+ * @version 0.1.0
  */
 
 .overflow-hidden {
@@ -95,3 +96,47 @@
 .blur-5 {
 	backdrop-filter: blur(5px);
 }
+
+
+.no-underlines {
+	text-decoration: none;
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+/* Text */
+.nowrap {
+	white-space: nowrap;
+}
+/* Animations */
+.scroll-down-arrow {
+	display: inline-block;
+	animation: smoothScrollDown 4s ease-in-out infinite;
+}
+
+.has-no-max-height {
+	max-height: none !important;
+}
+
+
+/*
+* @since ProLooks 4
+* --------------------------------------------- */
+
+.rotate-plus-2 {
+	transform: rotate(2deg);
+  }
+  .rotate-plus-3 {
+	transform: rotate(3deg);
+  }
+
+  .rotate-minus-2 {
+	transform: rotate(-2deg);
+  }
+  .rotate-minus-3 {
+	transform: rotate(-3deg);
+  }

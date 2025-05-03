@@ -9,8 +9,8 @@
 		display: flex;
 		justify-content: space-between;
 		font-weight: 600;
-
-		transition: 0.2s;
+		padding-block-start: var(--wp--preset--spacing--20);
+		padding-block-end: var(--wp--preset--spacing--20);
 
 		/* remove rectangle on Safari */
 		&::-webkit-details-marker {
@@ -24,20 +24,42 @@
 			transform: rotate(0deg); /* chevron faces to right */
 			transition: 0.2s;
 
-			padding-bottom: 0.2em;
 			aspect-ratio: 1/1;
-			height: 1.5em;
 			content: "\203A"; /* chevron */
 			font-weight: 400;
-			font-size: 1.5em;
+			font-size: 1em;
 		}
+
 	}
-	& p:first-of-type {
-		margin-top: var(--wp--preset--spacing--10);
+	& > :nth-child(2) {
+		margin-block-start: 0px;
+	}
+	& > :last-child{
+		padding-block-end: var(--wp--preset--spacing--20);
+
 	}
 
 	&[open] summary::after {
 		transform: rotate(90deg); /* chevron faces to the bottom */
-		padding-bottom: 0.2em;
+	}
+
+	/* Smooth open/close Animation */
+	@media (prefers-reduced-motion: no-preference) {
+		interpolate-size: allow-keywords;
+	}
+
+	&::details-content {
+		opacity: 0;
+		block-size: 0;
+		overflow-y: clip;
+		transition:
+			content-visibility 0.6s allow-discrete,
+			opacity 0.6s,
+			block-size 0.6s;
+	}
+
+	&[open]::details-content {
+		opacity: 1;
+		block-size: auto;
 	}
 }
