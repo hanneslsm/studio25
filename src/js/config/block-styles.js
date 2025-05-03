@@ -27,10 +27,16 @@ const blockStyles = [
 		styles: [ { name: 'prolooks-spotlight', label: '🏅 Spotlight' } ],
 	},
 	{
+		block: 'core/image',
+		styles: [ { name: 'prolooks-picture-frame', label: '🏅 Picture Frame' } ],
+	},
+	{
 		block: 'core/list',
 		styles: [
 			{ name: 'prolooks-checkmark', label: '🏅 Checkmark' },
 			{ name: 'prolooks-crossmark', label: '🏅 Crossmark' },
+			{ name: 'prolooks-crossmark-2', label: '🏅 Crossmark 2 Red' },
+			{ name: 'prolooks-checkmark-2', label: '🏅 Checkmark 2 Green' },
 		],
 	},
 	{

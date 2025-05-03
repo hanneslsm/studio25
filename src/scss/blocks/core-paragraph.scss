@@ -2,7 +2,19 @@
 /// Paragraph
 ///
 
-/* Block Style: Kicker
+/**
+* Bug fixes
+*
+============================================================== */
+
+/** @link  https://github.com/WordPress/gutenberg/issues/55190 */
+p{
+	text-wrap: pretty;
+}
+
+/**
+* Block Style: Kicker
+*
 ============================================================== */
 /// See styles/blocks
 
