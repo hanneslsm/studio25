@@ -2,8 +2,8 @@
 	"version": 3,
 	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"blockTypes": ["core/image"],
-	"slug": "prolooks-screenshot",
-	"title": "🏅 Screenshot",
+	"slug": "screenshot",
+	"title": "Screenshot",
 	"styles":{
 		"css": "/* see also src/scss/sections/ */",
 		"border": {

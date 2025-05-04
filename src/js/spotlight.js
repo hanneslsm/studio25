@@ -5,7 +5,7 @@
 /* Block Style: Spotlight
 ============================================================== */
 document.addEventListener( 'DOMContentLoaded', function () {
-	const gradient = document.querySelector( '.is-style-prolooks-spotlight' );
+	const gradient = document.querySelector( '.is-style-spotlight' );
 
 	// Ensure the element exists before adding event listeners and manipulating styles
 	if ( gradient ) {
