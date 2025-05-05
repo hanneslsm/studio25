@@ -10,7 +10,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-studio25 is a custom the for StudioLeismann.com Created by hanneslsm in Sevilla
+studio25 is a custom the for StudioLeismann.com
+Created by hanneslsm in Sevilla and Berlin
+
+== Greetings ==
+
+Howdy a8c!
+Also, hey mom!
+And hello world!
 
 == Changelog ==
 
