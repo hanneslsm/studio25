@@ -54,7 +54,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			x +
 			'px ' +
 			y +
-			'px, rgba(0, 0, 0, 0) 0, var(--wp--preset--color--contrast) 100%)';
+			'px, rgba(0, 0, 0, 0) 0, var(--wp--preset--color--base) 100%)';
 	}
 
 	// Start-Spot beim Laden (Mitte)
