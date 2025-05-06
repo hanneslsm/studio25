@@ -10,4 +10,5 @@ import './config/block-variations.js';
 import './utilities/on-stuck.js';
 
 /* Import Scripts */
-import './spotlight.js';
+import './custom/spotlight.js';
+import './custom/sticker.js';
