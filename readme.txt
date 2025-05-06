@@ -21,9 +21,7 @@ And hello world!
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release
-
+see https://github.com/hanneslsm/studio25/releases
 
 == Copyright ==
 
