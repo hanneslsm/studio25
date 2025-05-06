@@ -3,6 +3,7 @@ document.querySelectorAll('.sticker').forEach((figure) => {
 	let isDragging = false;
 	let offsetX = 0;
 	let offsetY = 0;
+	let lastTap = 0;
 
 	const vw = document.documentElement.clientWidth;
 	const vh = document.documentElement.clientHeight;
@@ -70,6 +71,23 @@ document.querySelectorAll('.sticker').forEach((figure) => {
 
 	figure.addEventListener('touchstart', (e) => {
 		if (!e.touches[0]) return;
+
+		const now = Date.now();
+		const timeSince = now - lastTap;
+		lastTap = now;
+
+		if (timeSince < 300) {
+			// double tap detected
+			figure.style.animation = 'none';
+			figure.offsetHeight;
+			figure.style.animation = 'poof 0.4s ease-out forwards';
+			figure.style.pointerEvents = 'none';
+			setTimeout(() => {
+				figure.style.display = 'none';
+			}, 400);
+			return;
+		}
+
 		isDragging = true;
 		offsetX = e.touches[0].clientX - figure.offsetLeft;
 		offsetY = e.touches[0].clientY - figure.offsetTop;
@@ -78,6 +96,7 @@ document.querySelectorAll('.sticker').forEach((figure) => {
 		document.addEventListener('touchend', onTouchEnd);
 		e.preventDefault();
 	});
+
 
 	figure.addEventListener('dblclick', () => {
 		// Reset animation to force reflow
