@@ -54,3 +54,12 @@
 		}
 	}
 }
+
+
+.wp-block-cover.is-style-blurred{
+	> img{
+		filter:blur(12px);
+		transform: scale(1.1);
+	}
+
+}
