@@ -1,0 +1,11 @@
+.sticker {
+	position: absolute;
+	margin: 0;
+	z-index: 500;
+	cursor: grab;
+	opacity: 0;
+	transition: scale 0.15s ease;
+	&:active {
+		scale: 0.98;
+	}
+}
