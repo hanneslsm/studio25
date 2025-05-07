@@ -23,6 +23,10 @@ const blockStyles = [
 		styles: [ { name: 'spotlight', label: 'Spotlight' } ],
 	},
 	{
+		block: 'core/cover',
+		styles: [ { name: 'blurred', label: 'Blurred' } ],
+	},
+	{
 		block: 'core/image',
 		styles: [ { name: 'picture-frame', label: 'Picture Frame' } ],
 	},
