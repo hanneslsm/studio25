@@ -1,3 +1,8 @@
+/**
+ * Sticker
+ * @version 1.0.0
+ */
+
 window.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('.sticker').forEach((figure) => {
 		let isDragging = false;
