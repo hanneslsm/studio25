@@ -1,4 +1,10 @@
 {
+	"customTemplates": [
+		{
+			"name": "page-without-header",
+			"title": "Page (without Header)"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"blocks": {

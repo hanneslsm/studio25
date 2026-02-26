@@ -1,0 +1,45 @@
+///
+/// Section Header Fixed
+///
+
+/** @link https://github.com/WordPress/gutenberg/issues/69255 */
+.is-style-section-header-fixed .wp-block-image img {
+	vertical-align: middle;
+}
+
+div.is-style-section-header-fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	top: var(--wp--preset--spacing--20);
+}
+
+/**
+ * On Stuck utilities
+ */
+
+@media screen and (min-width: 782px) {
+	.on-stuck-has-padding {
+		transition: all 400ms linear;
+
+		&.is-stuck {
+			padding-top: var(--wp--preset--spacing--30);
+		}
+	}
+}
+
+.on-stuck-has-layers {
+	transition: all 200ms linear;
+	> div {
+		transition: all 200ms linear;
+	}
+	&.is-stuck {
+		padding-top: var(--wp--preset--spacing--30);
+	}
+	&.is-top > div {
+		box-shadow: var(--wp--preset--shadow--xx-large);
+	}
+	&.is-behind {
+		opacity: 0.2;
+	}
+}

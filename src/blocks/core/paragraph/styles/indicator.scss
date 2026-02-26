@@ -1,0 +1,20 @@
+///
+/// Paragraph: Indicator
+///
+
+p.is-style-indicator {
+	padding-inline-start: var(--wp--preset--spacing--20);
+	text-indent: -2px;
+	&::before {
+		position: relative;
+		content: "";
+		border: 1px solid var(--wp--preset--color--brand-3);
+		right: var(--wp--preset--spacing--20);
+	}
+
+	.is-style-section-brand-3 & {
+		&::before {
+			border: 1px solid var(--wp--preset--color--brand-7);
+		}
+	}
+}

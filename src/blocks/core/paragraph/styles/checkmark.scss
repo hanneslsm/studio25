@@ -1,0 +1,12 @@
+///
+/// Paragraph: Checkmark
+///
+
+p.is-style-checkmark {
+	padding-inline-start: var(--wp--preset--spacing--20);
+	&::before {
+		content: "\2713";
+		margin-inline-end: var(--wp--preset--spacing--10);
+		color: var(--wp--preset--color--brand-3);
+	}
+}

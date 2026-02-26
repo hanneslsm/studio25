@@ -4,24 +4,36 @@
  * studio25 functions and definitions
  *
  * @package studio25
- * @since 0.1
  */
-
 
 // Setup
 require get_template_directory() . '/inc/setup.php';
 
-// Patterns Setup
-require get_template_directory() . '/inc/block-patterns.php';
-
 // Enqueue files
 require get_template_directory() . '/inc/enqueuing.php';
 
-// Dashboard Widget
-require get_template_directory() . '/inc/dashboard-widget.php';
+// Block  Variations
+require get_template_directory() . '/inc/block-variations.php';
+
+// Block Style Variations
+require get_template_directory() . '/inc/block-styles.php';
+
+// Patterns Setup
+require get_template_directory() . '/inc/block-patterns.php';
+
 
 /**
- * Development only!
+ * ProLooks tools
  */
+
+// Remove emojis
+require get_template_directory() . '/inc/prolooks/gpdr-remove-emojis.php';
+
+// Dashboard Widget
+require get_template_directory() . '/inc/prolooks/dashboard-widget.php';
+
 // Remove default CSS variables
-// require get_template_directory() . '/inc/dev_remove-defaults.php';
+// require get_template_directory() . '/inc/prolooks/dev-remove-defaults.php';
+
+// Purge theme cache
+require get_template_directory() . '/inc/prolooks/dev-purge-themes-cache.php';
