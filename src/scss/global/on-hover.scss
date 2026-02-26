@@ -57,25 +57,25 @@
 
 .on-hover-shine {
 	position: relative;
-	overflow: hidden;
 	cursor: auto;
+	overflow: hidden;
 
 	&::before {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		transform: skewX(-25deg);
+		z-index: 2;
 		background: linear-gradient(
 			to right,
 			color.scale(#fff, $alpha: -100%) 0%,
 			color.scale(#fff, $alpha: -70%) 100%
 		);
-		content: "";
-		display: block;
-		height: 100%;
-		left: -100%;
-		position: absolute;
-		top: 0;
-		transform: skewX(-25deg);
 		width: 50%;
-		z-index: 2;
+		height: 100%;
 		pointer-events: none;
+		content: "";
 	}
 
 	&:hover,
@@ -96,8 +96,8 @@
  * Scale Effect
  * ============================================================== */
 .on-hover-scale {
-	transition: transform 0.2s linear;
 	transform-origin: bottom;
+	transition: transform 0.2s linear;
 	&:hover {
 		transform: scale(1.02);
 	}

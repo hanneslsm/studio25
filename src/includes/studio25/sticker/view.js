@@ -93,7 +93,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			offsetX = e.touches[0].clientX - figure.offsetLeft;
 			offsetY = e.touches[0].clientY - figure.offsetTop;
 			figure.style.transform = 'scale(0.9)';
-			document.addEventListener('touchmove', onTouchMove, { passive: false });
+			document.addEventListener('touchmove', onTouchMove, {
+				passive: false,
+			});
 			document.addEventListener('touchend', onTouchEnd);
 			e.preventDefault();
 		});

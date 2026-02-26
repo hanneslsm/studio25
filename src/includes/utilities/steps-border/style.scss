@@ -7,12 +7,11 @@
 }
 
 .studio25-steps-border::after {
-	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	width: 2px;
+	animation: studio25-border-position 2s linear infinite;
 	background-image: repeating-linear-gradient(
 		to bottom,
 		var(--wp--preset--color--base-5),
@@ -20,7 +19,8 @@
 		transparent 4px,
 		transparent 8px
 	);
-	animation: studio25-border-position 2s linear infinite;
+	width: 2px;
+	content: "";
 }
 
 @keyframes studio25-border-position {

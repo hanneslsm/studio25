@@ -3,51 +3,51 @@
 /// @version 1.1.0
 ///
 
-document.addEventListener( 'DOMContentLoaded', function() {
-	const gradient = document.querySelector( '.is-style-spotlight' );
-	if ( ! gradient ) {
+document.addEventListener('DOMContentLoaded', function () {
+	const gradient = document.querySelector('.is-style-spotlight');
+	if (!gradient) {
 		return;
 	}
 
 	// Grain-Canvas anlegen
-	const grainCanvas = document.createElement( 'canvas' );
-	const grainCtx    = grainCanvas.getContext( '2d' );
-	grainCanvas.className         = 'spotlight-grain';
-	grainCanvas.style.position     = 'absolute';
-	grainCanvas.style.top          = '0';
-	grainCanvas.style.left         = '0';
-	grainCanvas.style.width        = '100%';
-	grainCanvas.style.height       = '100%';
+	const grainCanvas = document.createElement('canvas');
+	const grainCtx = grainCanvas.getContext('2d');
+	grainCanvas.className = 'spotlight-grain';
+	grainCanvas.style.position = 'absolute';
+	grainCanvas.style.top = '0';
+	grainCanvas.style.left = '0';
+	grainCanvas.style.width = '100%';
+	grainCanvas.style.height = '100%';
 	grainCanvas.style.pointerEvents = 'none';
 	grainCanvas.style.mixBlendMode = 'overlay';
-	gradient.appendChild( grainCanvas );
+	gradient.appendChild(grainCanvas);
 
 	function resizeCanvas() {
-		grainCanvas.width  = gradient.clientWidth;
+		grainCanvas.width = gradient.clientWidth;
 		grainCanvas.height = gradient.clientHeight;
 		generateGrain();
 	}
 
 	function generateGrain() {
-		const w       = grainCanvas.width;
-		const h       = grainCanvas.height;
-		const imgData = grainCtx.createImageData( w, h );
+		const w = grainCanvas.width;
+		const h = grainCanvas.height;
+		const imgData = grainCtx.createImageData(w, h);
 
-		for ( let i = 0; i < imgData.data.length; i += 4 ) {
+		for (let i = 0; i < imgData.data.length; i += 4) {
 			const val = Math.random() * 255;
-			imgData.data[ i     ] = val;
-			imgData.data[ i + 1 ] = val;
-			imgData.data[ i + 2 ] = val;
-			imgData.data[ i + 3 ] = 16; // Alpha ~6%
+			imgData.data[i] = val;
+			imgData.data[i + 1] = val;
+			imgData.data[i + 2] = val;
+			imgData.data[i + 3] = 16; // Alpha ~6%
 		}
 
-		grainCtx.putImageData( imgData, 0, 0 );
+		grainCtx.putImageData(imgData, 0, 0);
 	}
 
 	resizeCanvas();
-	window.addEventListener( 'resize', resizeCanvas );
+	window.addEventListener('resize', resizeCanvas);
 
-	function updateGradient( x, y ) {
+	function updateGradient(x, y) {
 		gradient.style.backgroundImage =
 			'radial-gradient(at ' +
 			x +
@@ -56,15 +56,22 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			'px, rgba(0, 0, 0, 0) 0, var(--wp--preset--color--base) 100%)';
 	}
 
-	updateGradient( window.innerWidth / 2, window.innerHeight / 2 );
+	updateGradient(window.innerWidth / 2, window.innerHeight / 2);
 
-	document.addEventListener( 'pointermove', function( event ) {
-		updateGradient( event.clientX, event.clientY );
-	} );
+	document.addEventListener('pointermove', function (event) {
+		updateGradient(event.clientX, event.clientY);
+	});
 
-	document.addEventListener( 'touchmove', function( event ) {
-		if ( event.touches && event.touches.length ) {
-			updateGradient( event.touches[ 0 ].clientX, event.touches[ 0 ].clientY );
-		}
-	}, { passive: true } );
-} );
+	document.addEventListener(
+		'touchmove',
+		function (event) {
+			if (event.touches && event.touches.length) {
+				updateGradient(
+					event.touches[0].clientX,
+					event.touches[0].clientY
+				);
+			}
+		},
+		{ passive: true }
+	);
+});

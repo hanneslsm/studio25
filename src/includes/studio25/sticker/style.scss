@@ -4,11 +4,11 @@
 
 .sticker {
 	position: absolute;
-	margin: 0;
-	z-index: 500;
-	cursor: grab;
 	opacity: 0;
+	z-index: 500;
 	transition: scale 0.15s ease;
+	cursor: grab;
+	margin: 0;
 	&:active {
 		scale: 0.98;
 	}
