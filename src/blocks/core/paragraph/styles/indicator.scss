@@ -7,9 +7,9 @@ p.is-style-indicator {
 	text-indent: -2px;
 	&::before {
 		position: relative;
-		content: "";
-		border: 1px solid var(--wp--preset--color--brand-3);
 		right: var(--wp--preset--spacing--20);
+		border: 1px solid var(--wp--preset--color--brand-3);
+		content: "";
 	}
 
 	.is-style-section-brand-3 & {

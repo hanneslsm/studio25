@@ -3,8 +3,8 @@
 ///
 
 .wp-block-button.is-style-base > .wp-block-button__link {
-	color: var(--wp--preset--color--contrast);
 	background-color: var(--wp--preset--color--base-2);
+	color: var(--wp--preset--color--contrast);
 
 	&:hover {
 		background-color: color-mix(
